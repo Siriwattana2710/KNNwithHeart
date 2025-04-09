@@ -9,14 +9,6 @@ st.title('การทำนายโรคหัวใจ❤️')
 st.image("./img/hog.jpg")
 col1, col2, col3 = st.columns(3)
 
-with col1:
-   st.header("เป็นโรคหัวใจ")
-   st.image("./img/eee.jpg")
-
-with col2:
-   st.header("ไม่เป็นโรคหัวใจ")
-   st.image("./img/ttt.jpg")
-
 html_7 = """
 <div style="background-color:#f7b3f1;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
 <center><h5>ข้อมูล iris หรือข้อมูลดอกไม้สำหรับทำนาย</h5></center>
@@ -60,31 +52,25 @@ html_8 = """
 st.markdown(html_8, unsafe_allow_html=True)
 st.markdown("")
 
-pt_len = st.slider("กรุณาเลือกข้อมูล petal.length")
-pt_wd = st.slider("กรุณาเลือกข้อมูล petal.width")
-
-sp_len = st.number_input("กรุณาเลือกข้อมูล sepal.length")
-sp_wd = st.number_input("กรุณาเลือกข้อมูล sepal.width")
+A1 = st.number_
 
 if st.button("ทำนายผล"):
     #st.write("ทำนาย")
-   dt = pd.read_csv("./data/iris-3.csv") 
-   X = dt.drop('variety', axis=1)
-   y = dt.variety   
+  # dt = pd.read_csv("./data/iris-3.csv") 
+   X = dt.drop('HeartDisease', axis=1)
+   y = dt.eartDisease
 
    Knn_model = KNeighborsClassifier(n_neighbors=3)
    Knn_model.fit(X, y)  
     
-   x_input = np.array([[pt_len, pt_wd, sp_len, sp_wd]])
+   x_input = np.array([[A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11]])
    st.write(Knn_model.predict(x_input))
    
    out=Knn_model.predict(x_input)
 
    if out[0] == 'Setosa':
-    st.image("./img/iris1.jpg")
+    st.image("./img/eee.jpg")
    elif out[0] == 'Versicolor':       
-    st.image("./img/iris2.jpg")
+    st.image("./img/ttt.jpg")
    else:
-    st.image("./img/iris3.jpg")
-else:
     st.write("ไม่ทำนาย")
