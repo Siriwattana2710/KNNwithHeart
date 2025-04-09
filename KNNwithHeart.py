@@ -9,6 +9,14 @@ st.title('การทำนายโรคหัวใจ❤️ด้วยเ�
 st.image("./img/hog.jpg")
 col1, col2, col3 = st.columns(3)
 
+with col1:
+   st.header("Versicolor")
+   st.image("./img/rrr.jpg")
+
+with col2:
+   st.header("Verginiga")
+   st.image("./img/yyy.jpg")
+
 html_7 = """
 <div style="background-color:#f7b3f1;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
 <center><h5>ข้อมูล Heart3 หรือข้อมูลการเป็นโรคหัวใจสำหรับการทำนาย</h5></center>
@@ -52,7 +60,18 @@ html_8 = """
 st.markdown(html_8, unsafe_allow_html=True)
 st.markdown("")
 
-A1 = st.number_
+A1 = st.number_input("กรุณาเลือกข้อมูล Age")
+A2 = st.number_input("กรุณาเลือกข้อมูล Sex")
+A3 = st.number_input("กรุณาเลือกข้อมูล ChestPainType")
+A4 = st.number_input("กรุณาเลือกข้อมูล RestingBP")
+A5 = st.number_input("กรุณาเลือกข้อมูล Cholesterol")
+A6 = st.number_input("กรุณาเลือกข้อมูล FastingBS")
+A7 = st.number_input("กรุณาเลือกข้อมูล RestingECG")
+A8 = st.number_input("กรุณาเลือกข้อมูล MaxHR")
+A9 = st.number_input("กรุณาเลือกข้อมูล ExerciseAngina")
+A10 = st.number_input("กรุณาเลือกข้อมูล Oldpeak")
+A11 = st.number_input("กรุณาเลือกข้อมูล ST_Slope")
+
 
 if st.button("ทำนายผล"):
     #st.write("ทำนาย")
