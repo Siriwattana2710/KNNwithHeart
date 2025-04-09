@@ -73,21 +73,21 @@ A11 = st.number_input("กรุณาเลือกข้อมูล ST_Slope
 
 if st.button("ทำนายผล"):
     #st.write("ทำนาย")
-  # dt = pd.read_csv("./data/iris-3.csv") 
+   dt = pd.read_csv("./data/Heart3.csv") 
    X = dt.drop('HeartDisease', axis=1)
-   y = dt.eartDisease
+   y = dt.HeartDisease   
 
    Knn_model = KNeighborsClassifier(n_neighbors=3)
    Knn_model.fit(X, y)  
     
-   x_input = np.array([[A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11]])
+   x_input = np.array([[A1, A2,A3, A4,A5, A6,A7, A8,A9, A10,A11]])
    st.write(Knn_model.predict(x_input))
    
    out=Knn_model.predict(x_input)
 
-   if out[0] == 'Setosa':
-    st.image("./img/eee.jpg")
-   elif out[0] == 'Versicolor':       
+   if out[0] == 'maipen':
     st.image("./img/ttt.jpg")
-   else:
+   elif out[0] == 'pen':       
+    st.image("./img/eee.jpg")
+else:
     st.write("ไม่ทำนาย")
