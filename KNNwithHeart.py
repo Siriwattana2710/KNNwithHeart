@@ -5,7 +5,7 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-st.title('การทำนายโรคหัวใจ❤️ ด้วยเทคนิค Machine Learning')
+st.title('การทำนายโรคหัวใจ❤️ด้วยเทคนิค Machine Learning')
 st.image("./img/hog.jpg")
 col1, col2, col3 = st.columns(3)
 
