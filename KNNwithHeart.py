@@ -9,14 +9,6 @@ st.title('การทำนายโรคหัวใจ❤️ด้วยเ�
 st.image("./img/hog.jpg")
 col1, col2, col3 = st.columns(3)
 
-with col1:
-   st.header("เป็นโรคหัวใจ")
-   st.image("./img/eee.jpg")
-
-with col2:
-   st.header("ไม่เป็นโรคหัวใจ")
-   st.image("./img/ttt.jpg")
-
 html_7 = """
 <div style="background-color:#f7b3f1;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
 <center><h5>ข้อมูล iris หรือข้อมูลดอกไม้สำหรับทำนาย</h5></center>
