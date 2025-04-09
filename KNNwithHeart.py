@@ -11,7 +11,7 @@ col1, col2, col3 = st.columns(3)
 
 html_7 = """
 <div style="background-color:#f7b3f1;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
-<center><h5>ข้อมูล iris หรือข้อมูลดอกไม้สำหรับทำนาย</h5></center>
+<center><h5>ข้อมูล Heart3 หรือข้อมูลการเป็นโรคหัวใจสำหรับการทำนาย</h5></center>
 </div>
 """
 st.markdown(html_7, unsafe_allow_html=True)
