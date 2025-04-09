@@ -41,7 +41,8 @@ feature = st.selectbox("เลือกฟีเจอร์", dt.columns[:-1])
 # วาดกราฟ boxplot
 st.write(f"### 🎯 Boxplot: {feature} แยกตามชนิดของดอกไม้")
 fig, ax = plt.subplots()
-sns.boxplot(data=dt, x='variety', y=feature, ax=ax)
+sns.boxplot(data=dt, x='HeartDisease', y=feature, ax=ax)
+
 st.pyplot(fig)
 
 # วาด pairplot
